@@ -717,7 +717,6 @@ class TextBox(AxesWidget):
         self.connect_event('key_press_event', self._keypress)
         self.connect_event('resize_event', self._resize)
         ax.set_navigate(False)
-        ax.set_facecolor(color)
         ax.set_xticks([])
         ax.set_yticks([])
         self.color = color
@@ -887,7 +886,6 @@ class TextBox(AxesWidget):
         else:
             c = self.color
         if c != self._lastcolor:
-            self.ax.set_facecolor(c)
             self._lastcolor = c
             if self.drawon:
                 self.ax.figure.canvas.draw()
